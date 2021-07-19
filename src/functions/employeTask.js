@@ -82,6 +82,9 @@ export const getCategory = async (id, token) => {
     },
   });
 };
+export const singleProduct = async (id) => {
+  return await axios.get(`${process.env.REACT_APP_API}/singleproduct/${id}`);
+};
 
 export const allProducts = async () => {
   return await axios.get(`${process.env.REACT_APP_API}/Allproducts`);

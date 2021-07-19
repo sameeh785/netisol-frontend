@@ -1,6 +1,11 @@
-import {combineReducers} from "redux"
-import {userReducer} from "./userReducer"
+import { combineReducers } from "redux";
+import { userReducer } from "./userReducer";
+import { cartReducer } from "./cart";
+import { totalReducer } from "./total";
+
 const store = combineReducers({
-  user : userReducer
-})
-export default store
+  user: userReducer,
+  cart: cartReducer,
+  total: totalReducer,
+});
+export default store;

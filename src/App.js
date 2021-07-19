@@ -20,6 +20,9 @@ import UpdateCategory from "./pages/EmployeDashboard/UpdateCategory";
 import ViewProducts from "./pages/EmployeDashboard/ViewProdcts";
 import UpdateProduct from "./pages/EmployeDashboard/UpdateProduct";
 import Home from './components/Home/home'
+import SingleProduct from "./components/Home/SingleProduct"
+import Cart from "./components/cart/cart";
+import Payment from "./components/cart/Payment";
 
 
 const App = () => {
@@ -31,7 +34,10 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/signin" component={Signin} />
+        <Route exact path="/payment" component={Payment}/>
+        <Route exact path="/single/product/:id" component={SingleProduct} />
         <Route exact path="/signin/employe" component={SigninEmploye} />
+        <Route exact path="/cart" component={Cart} />
         <AdminRoute exact path="/admin/dashboard" component={AdminDashboard} />
         <AdminRoute exact path="/create/employe" component={EmployeCreate} />
         <AdminRoute exact path="/view/employes" component={ViewEmployes} />

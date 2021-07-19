@@ -15,10 +15,15 @@ const Signin = ({ history }) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
   const roleBasedRedirect = (res) => {
-    if (res.data.role === 2) {
-      history.push("/admin/dashboard");
+    let intended = history.location.state;
+    if (intended) {
+      history.push(intended.from);
     } else {
-      history.push("/user/history");
+      if (res.data.role === 2) {
+        history.push("/admin/dashboard");
+      } else {
+        history.push("/user/history");
+      }
     }
   };
 
